@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Moon's Coffee Rewards to earn Stars for free food and drinks. Unlock Green, Gold and Reserve status benefits.">
+  <title>Moon's Coffee Rewards</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-left">
+    <a href="starbucks_homepage.html" class="nav-logo" aria-label="Moon's Coffee">
+      <svg width="62" height="62" viewBox="0 0 62 62" aria-hidden="true">
+        <circle cx="31" cy="31" r="31" fill="#4F4D46"/>
+        <circle cx="31" cy="31" r="27" fill="none" stroke="#fff" stroke-width="1.2"/>
+        <path d="M20 18 L22.5 13 L25 17 L31 10 L37 17 L39.5 13 L42 18" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="31" cy="28" rx="10" ry="11" fill="#4F4D46" stroke="#fff" stroke-width="1"/>
+        <circle cx="27" cy="27" r="1.2" fill="#fff"/>
+        <circle cx="35" cy="27" r="1.2" fill="#fff"/>
+        <path d="M27 31 Q31 34 35 31" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M19 38 Q15 44 17 48 Q22 44 23 40" fill="#fff" opacity="0.9"/>
+        <path d="M43 38 Q47 44 45 48 Q40 44 39 40" fill="#fff" opacity="0.9"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="starbucks_menu.html">Menu</a></li>
+      <li><a href="starbucks_rewards.html" class="active">Rewards</a></li>
+      <li><a href="starbucks_giftcards.html">Gift Cards</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="#" class="find-store">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Find a store
+    </a>
+    <a href="#" class="btn-signin">Sign in</a>
+    <a href="#" class="btn-join">Join now</a>
+    <a href="cart.html" class="nav-cart" aria-label="View cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+      <span class="cart-badge" style="display:none"></span>
+    </a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</nav>
+
+<div class="rewards-banner">
+  <h2>Introducing the new Starbucks® Rewards</h2>
+  <p>With new ways to earn free favorites and more ways than ever to celebrate our best customers, it's a great day to be a member.</p>
+</div>
+
+<section class="rewards-hero">
+  <div class="rewards-hero-inner">
+    <div class="rewards-hero-text">
+      <p class="hero-eyebrow">Starbucks® Rewards</p>
+      <h1 class="hero-heading">Free coffee is just the beginning</h1>
+      <p class="hero-body">Join now to start enjoying exclusive benefits and unlocking more of what you love.</p>
+      <a href="#" class="btn-green">Join now</a>
+    </div>
+    <div class="rewards-hero-visual">
+      <img
+        class="hero-image"
+        src="https://www.starbucks.com/weblx/images/sr6-rewards/hero-unauth-US.png"
+        alt=""
+        width="448"
+        height="579"
+        loading="eager">
+    </div>
+  </div>
+</section>
+
+<section class="rewards-section rewards-section--cream-light rewards-section--cream-tight">
+  <div class="section-inner">
+    <h2 class="section-heading">How it works</h2>
+    <p class="section-sub">Start sipping your way to delicious Rewards.</p>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-icon-gold">
+          <img src="https://www.starbucks.com/weblx/images/sr6-rewards/collect-stars.svg" alt="">
+        </div>
+        <h3>Collect Stars</h3>
+        <p>Earn Stars by making eligible purchases and participating in challenges, offers and games.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-icon-gold">
+          <img src="https://www.starbucks.com/weblx/images/sr6-rewards/free-treats.svg" alt="">
+        </div>
+        <h3>Enjoy free treats</h3>
+        <p>Redeem your Stars for free food, drinks and more. Look forward to a birthday treat on us every year.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-icon-gold">
+          <img src="https://www.starbucks.com/weblx/images/sr6-rewards/unlock-benefits.svg" alt="">
+        </div>
+        <h3>Unlock benefits</h3>
+        <p>Keep earning Stars to increase your status and help you get to free faster. Discover more benefits at every level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rewards-section rewards-section--white">
+  <div class="section-inner">
+    <h2 class="section-heading">Get rewarded for your routine</h2>
+    <p class="section-sub">As your status grows, so do your benefits.</p>
+    <div class="status-grid">
+
+      <div class="status-card status-card--green">
+        <h3>Green status</h3>
+        <p class="status-threshold">Less than 500★ earned each year</p>
+        <ul class="status-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 10h6v9H9z"/><path d="M10 10V7a2 2 0 014 0v3"/><path d="M8 14h8"/></svg>Free treat on your birthday</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 4.5 4.9.7-3.5 3.4.8 4.9L12 14.5 7.6 16.5l.8-4.9L5 8.2l4.9-.7z"/></svg>Earn 1★ per $1 spent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v3M8 6l2 2M16 6l-2 2"/><path d="M6 12h12l-1 8H7l-1-8z"/></svg>Free Mod Mondays—customize your drink once a month, on us</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8M10 18V9l2-3 2 3v9"/><path d="M6 9h12"/></svg>Early access, personalized offers and games</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11h6"/></svg>Bonus Stars for qualifying digital reloads to your Moon's Coffee Card</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8v3H8z"/><path d="M9 18V9h6v9"/><path d="M7 12h10"/></svg>Double Stars with personal cup</li>
+        </ul>
+      </div>
+
+      <div class="status-card status-card--gold">
+        <h3>Gold status</h3>
+        <p class="status-threshold">500+★ earned each year</p>
+        <ul class="status-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 10h6v9H9z"/><path d="M10 10V7a2 2 0 014 0v3"/><path d="M8 14h8"/></svg>7 days to redeem your birthday treat</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 4.5 4.9.7-3.5 3.4.8 4.9L12 14.5 7.6 16.5l.8-4.9L5 8.2l4.9-.7z"/></svg>Earn 1.2★ per $1 spent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Stars won't expire</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v3M8 6l2 2M16 6l-2 2"/><path d="M6 12h12l-1 8H7l-1-8z"/></svg>Free Mod Mondays—customize your drink once a month, on us</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8M10 18V9l2-3 2 3v9"/><path d="M6 9h12"/></svg>Early access, personalized offers and games</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11h6"/></svg>Bonus Stars for qualifying digital reloads to your Moon's Coffee Card</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8v3H8z"/><path d="M9 18V9h6v9"/><path d="M7 12h10"/></svg>Double Stars with personal cup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12l2 2 4-4"/><path d="M12 3l1.5 3 3.3.5-2.4 2.3.6 3.3L12 10.5 9 12.1l.6-3.3L7.2 6.5l3.3-.5z"/><path d="M16 14l1 2 2.2.3-1.6 1.5.4 2.2L16 18.5l-1.8 1.5.4-2.2-1.6-1.5 2.2-.3z"/></svg>4 more Double Star Days per year</li>
+        </ul>
+      </div>
+
+      <div class="status-card status-card--reserve">
+        <h3>Reserve status</h3>
+        <p class="status-threshold">2,500+★ earned each year</p>
+        <ul class="status-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 10h6v9H9z"/><path d="M10 10V7a2 2 0 014 0v3"/><path d="M8 14h8"/></svg>30 days to redeem your birthday treat</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.2 4.5 4.9.7-3.5 3.4.8 4.9L12 14.5 7.6 16.5l.8-4.9L5 8.2l4.9-.7z"/></svg>Earn 1.7★ per $1 spent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Stars won't expire</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v3M8 6l2 2M16 6l-2 2"/><path d="M6 12h12l-1 8H7l-1-8z"/></svg>Free Mod Mondays—customize your drink once a month, on us</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8M10 18V9l2-3 2 3v9"/><path d="M6 9h12"/></svg>Early access, personalized offers and games</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M9 11h6"/></svg>Bonus Stars for qualifying digital reloads to your Moon's Coffee Card</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18h8v3H8z"/><path d="M9 18V9h6v9"/><path d="M7 12h10"/></svg>Double Stars with personal cup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 14h18M5 14l2-4h10l2 4"/><path d="M12 10V6"/><path d="M8 6h8"/></svg>Access to exclusive global coffee experiences</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M4 10h16"/></svg>A free personalized Reserve Card to mark your achievement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12l1.5 3 3.3.5-2.4 2.3.6 3.3L10 17l-2.5 2 .6-3.3-2.4-2.3 3.3-.5z"/><path d="M14 12l1.5 3 3.3.5-2.4 2.3.6 3.3L17 17l-2.5 2 .6-3.3-2.4-2.3 3.3-.5z"/></svg>6 more Double Star Days per year</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="rewards-section rewards-section--white">
+  <div class="section-inner">
+    <div class="stars-panel">
+      <div class="stars-panel-header">
+        <h2 class="section-heading" style="margin-bottom:0">Get your favorites for free</h2>
+        <div class="stars-tabs" role="tablist">
+          <button class="stars-tab is-active" role="tab" aria-selected="true" data-stars="25">25★</button>
+          <button class="stars-tab" role="tab" aria-selected="false" data-stars="60">60★</button>
+          <button class="stars-tab" role="tab" aria-selected="false" data-stars="100">100★</button>
+          <button class="stars-tab" role="tab" aria-selected="false" data-stars="200">200★</button>
+          <button class="stars-tab" role="tab" aria-selected="false" data-stars="300">300★</button>
+          <button class="stars-tab" role="tab" aria-selected="false" data-stars="400">400★</button>
+        </div>
+      </div>
+      <div class="stars-panel-body">
+        <div class="stars-visual">
+          <img id="stars-img" src="images/rewards/25-stars.png" alt="Latte and espresso shot">
+          <img id="stars-badge" class="stars-badge-img" src="images/rewards/new-badge.png" alt="New" hidden>
+        </div>
+        <p class="stars-desc" id="stars-desc">$1 off a drink customization, including an espresso shot, syrup or cold foam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rewards-section rewards-section--white">
+  <div class="section-inner">
+    <h2 class="section-heading">Partnerships</h2>
+    <p class="section-sub">Link your accounts to unlock perks from our partners, all while earning more Stars.</p>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-logo partner-logo--delta">Delta SkyMiles®</div>
+        <p>Link your Delta account to earn miles, Bonus Stars and access to exclusive offers.†</p>
+        <a href="#" class="btn-outline-green">
+          View details
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo partner-logo--marriott">MARRIOTT BONVOY</div>
+        <p>Link your accounts to earn points, Bonus Stars and access to exciting member experiences.†</p>
+        <a href="#" class="btn-outline-green">
+          View details
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rewards-section rewards-section--white">
+  <div class="join-panel">
+    <div class="join-visual">
+      <div class="join-circle">
+        <img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-108288.jpg" alt="Person enjoying a Starbucks drink">
+      </div>
+    </div>
+    <div class="join-content">
+      <h2>Free to join, easy to get started</h2>
+      <p class="join-links"><a href="#">Join now</a> or <a href="#">download the app</a></p>
+      <div class="join-steps">
+        <div class="join-step">
+          <div class="join-step-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="16" r="8"/><path d="M8 42c0-8 7-14 16-14s16 6 16 14"/></svg>
+          </div>
+          <span>Create an account</span>
+        </div>
+        <div class="join-step">
+          <div class="join-step-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="6" width="24" height="36" rx="4"/><path d="M20 34h8"/><path d="M24 14v8M21 18h6" stroke-linecap="round"/></svg>
+          </div>
+          <span>Order and pay</span>
+        </div>
+        <div class="join-step">
+          <div class="join-step-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 20h20v18H14z"/><path d="M18 20V14h12v6"/><path d="M24 28l2 4 4-1-2 3 1 4-5-3-5 3 1-4-2-3 4 2z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <span>Earn Stars, get Rewards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faq-block">
+  <h2>Questions?</h2>
+  <p>We have answers. <a href="#">Check out the FAQs</a></p>
+</div>
+
+<section class="rewards-section rewards-section--sage">
+  <div class="app-promo-inner">
+    <div class="app-promo-text">
+      <h2>It's even better in the app</h2>
+      <p>Download the app to access exclusive offers, challenges and more.</p>
+      <div class="qr-box" aria-label="QR code to download the app">
+        <svg viewBox="0 0 100 100" fill="#000"><rect x="10" y="10" width="30" height="30"/><rect x="60" y="10" width="30" height="30"/><rect x="10" y="60" width="30" height="30"/><rect x="15" y="15" width="20" height="20" fill="#fff"/><rect x="65" y="15" width="20" height="20" fill="#fff"/><rect x="15" y="65" width="20" height="20" fill="#fff"/><rect x="20" y="20" width="10" height="10"/><rect x="70" y="20" width="10" height="10"/><rect x="20" y="70" width="10" height="10"/><rect x="50" y="50" width="8" height="8"/><rect x="62" y="50" width="8" height="8"/><rect x="74" y="50" width="8" height="8"/><rect x="50" y="62" width="8" height="8"/><rect x="62" y="74" width="8" height="8"/><rect x="74" y="62" width="8" height="8"/><rect x="50" y="74" width="8" height="8"/></svg>
+      </div>
+    </div>
+    <div class="app-promo-visual">
+      <div class="app-oval">
+        <img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-108288.jpg" alt="Starbucks drinks and food on a table with phone">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="terms-section">
+  <div class="terms-inner">
+    <h2>Terms of use</h2>
+    <p>For full program details visit <a href="#">starbucks.com/rewards/terms</a>.</p>
+    <p>Starbucks® Rewards benefits are available at participating Moon's Coffee stores. Not all stores have the ability to honor Rewards at this time. Visit the Starbucks Store Locator and search for locations honoring "Redeem Rewards".</p>
+
+    <div class="terms-grid">
+      <div>
+        <h3>Earn rate</h3>
+        <ul>
+          <li>Green members earn 1 Star per $1 spent at participating stores.</li>
+          <li>Gold members earn 1.2 Stars per $1 spent at participating stores.</li>
+          <li>Reserve members earn 1.7 Stars per $1 spent at participating stores.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Birthday Reward</h3>
+        <ul>
+          <li>Green members receive a Birthday Reward valid for 1 day.</li>
+          <li>Gold members receive a Birthday Reward valid for 7 days.</li>
+          <li>Reserve members receive a Birthday Reward valid for 30 days.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Redeeming Rewards</h3>
+        <p>Food and beverage Rewards cannot be combined with other offers or discounts. Some restrictions apply.</p>
+      </div>
+      <div>
+        <h3>Mod Monday</h3>
+        <p>One free drink customization per month for eligible members at participating stores.</p>
+      </div>
+    </div>
+
+    <p><strong>Star expiration:</strong> Green members' Stars expire 6 months after the calendar month in which they were earned. Gold and Reserve members' Stars do not expire as long as the member remains in that status level.</p>
+    <p><strong>Partnerships:</strong> See <a href="#">Delta Terms and Conditions</a> and <a href="#">Marriott Bonvoy Terms and Conditions</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col"><h4>About Us</h4><a href="#">Our Company</a><a href="#">Our Coffee</a><a href="#">About Moon's Coffee</a><a href="#">Moon's Coffee Archive</a><a href="#">Investor Relations</a><a href="#">Customer Service</a><a href="#">Contact Us</a></div>
+      <div class="footer-col"><h4>Careers</h4><a href="#">Culture and Values</a><a href="#">Belonging at Moon's Coffee</a><a href="#">College Achievement Plan</a><a href="#">Alumni Community</a><a href="#">U.S. Careers</a><a href="#">International Careers</a></div>
+      <div class="footer-col"><h4>Social Impact</h4><a href="#">Communities</a><a href="#">Moon's Coffee Foundation</a><a href="#">Sustainability</a><a href="#">Environmental and Social Impact Reporting</a></div>
+      <div class="footer-col"><h4>For Business Partners</h4><a href="#">Landlord Support Center</a><a href="#">Suppliers</a><a href="#">Corporate Gift Card Sales</a><a href="#">Office and Foodservice Coffee</a></div>
+      <div class="footer-col"><h4>Order and Pick Up</h4><a href="#">Order on the App</a><a href="#">Order on the Web</a><a href="#">Delivery</a><a href="#">Order and Pick Up Options</a><a href="#">Explore and Find Coffee for Home</a></div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-social">
+      <a href="#" class="social-icon" aria-label="Spotify"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      <a href="#" class="social-icon" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Notice</a>
+      <a href="#">Consumer Health Privacy Notice</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Do Not Sell or Share My Personal Information</a>
+      <a href="#">Moon's Coffee Transparency Statement</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Cookie Preferences</a>
+    </div>
+    <p class="footer-copy">&copy; 2024 Moon's Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script>
+  const nav = document.getElementById('main-nav');
+  nav.querySelector('.nav-toggle').addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    const btn = nav.querySelector('.nav-toggle');
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+
+  const starTiers = {
+    25: {
+      desc: '$1 off a drink customization, including an espresso shot, syrup or cold foam.',
+      img: 'images/rewards/25-stars.png',
+      alt: 'Latte and espresso shot',
+      badge: false
+    },
+    60: {
+      desc: 'New! Up to $2 off your order.',
+      img: 'images/rewards/60-stars.png',
+      alt: 'Cold brew with cold foam and cake pop',
+      badge: true
+    },
+    100: {
+      desc: 'Brewed coffee or tea (hot or iced), bakery item, packaged snacks and more. Up to $6 value.',
+      img: 'images/rewards/100-stars.png',
+      alt: 'Iced coffee, hot beverage and bakery item',
+      badge: false
+    },
+    200: {
+      desc: 'Handcrafted drink (like a latte or cold brew) or hot breakfast. Up to $10 value.',
+      img: 'images/rewards/200-stars.png',
+      alt: 'Refresher, caramel macchiato and breakfast sandwich',
+      badge: false
+    },
+    300: {
+      desc: 'Sandwich, protein box or packaged coffee. Up to $16 value.',
+      img: 'images/rewards/300-stars.png',
+      alt: 'Bagged coffee and grilled cheese',
+      badge: false
+    },
+    400: {
+      desc: 'Select Starbucks® merchandise. Up to $20 value.',
+      img: 'images/rewards/400-stars.png',
+      alt: 'Starbucks drinkware merchandise',
+      badge: false
+    }
+  };
+
+  const tabs = document.querySelectorAll('.stars-tab');
+  const descEl = document.getElementById('stars-desc');
+  const imgEl = document.getElementById('stars-img');
+  const badgeEl = document.getElementById('stars-badge');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      const tier = starTiers[tab.dataset.stars];
+      descEl.textContent = tier.desc;
+      imgEl.src = tier.img;
+      imgEl.alt = tier.alt;
+      badgeEl.hidden = !tier.badge;
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Moon's Coffee</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-page">
+
+<nav id="main-nav">
+  <div class="nav-left">
+    <a href="starbucks_homepage.html" class="nav-logo" aria-label="Home">
+      <svg width="62" height="62" viewBox="0 0 62 62" aria-hidden="true">
+        <circle cx="31" cy="31" r="31" fill="#4F4D46"/>
+        <circle cx="31" cy="31" r="27" fill="none" stroke="#fff" stroke-width="1.2"/>
+        <path d="M20 18 L22.5 13 L25 17 L31 10 L37 17 L39.5 13 L42 18" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="31" cy="28" rx="10" ry="11" fill="#4F4D46" stroke="#fff" stroke-width="1"/>
+        <circle cx="27" cy="27" r="1.2" fill="#fff"/>
+        <circle cx="35" cy="27" r="1.2" fill="#fff"/>
+        <path d="M27 31 Q31 34 35 31" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M19 38 Q15 44 17 48 Q22 44 23 40" fill="#fff" opacity="0.9"/>
+        <path d="M43 38 Q47 44 45 48 Q40 44 39 40" fill="#fff" opacity="0.9"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="starbucks_menu.html">Menu</a></li>
+      <li><a href="starbucks_rewards.html">Rewards</a></li>
+      <li><a href="starbucks_giftcards.html">Gift Cards</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="#" class="find-store">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Find a store
+    </a>
+    <a href="#" class="btn-signin">Sign in</a>
+    <a href="#" class="btn-join">Join now</a>
+    <a href="cart.html" class="nav-cart" aria-label="View cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+      <span class="cart-badge" style="display:none"></span>
+    </a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+  </button>
+</nav>
+
+<main class="checkout-main" id="checkout-root">
+  <!-- Rendered by JS -->
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col"><h4>About Us</h4><a href="#">Our Company</a></div>
+      <div class="footer-col"><h4>Careers</h4><a href="#">U.S. Careers</a></div>
+      <div class="footer-col"><h4>Order and Pick Up</h4><a href="#">Delivery</a></div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-copy">&copy; 2024 Moon's Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/resend-config.js"></script>
+<script src="js/checkout.js"></script>
+<script>
+  var nav = document.getElementById('main-nav');
+  var toggle = nav.querySelector('.nav-toggle');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>

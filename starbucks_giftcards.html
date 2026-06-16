@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Cards | Moon's Coffee</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="giftcards.css">
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-left">
+    <a href="starbucks_homepage.html" class="nav-logo" aria-label="Home">
+      <svg width="62" height="62" viewBox="0 0 62 62" aria-hidden="true">
+        <circle cx="31" cy="31" r="31" fill="#4F4D46"/>
+        <circle cx="31" cy="31" r="27" fill="none" stroke="#fff" stroke-width="1.2"/>
+        <path d="M20 18 L22.5 13 L25 17 L31 10 L37 17 L39.5 13 L42 18" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="31" cy="28" rx="10" ry="11" fill="#4F4D46" stroke="#fff" stroke-width="1"/>
+        <circle cx="27" cy="27" r="1.2" fill="#fff"/>
+        <circle cx="35" cy="27" r="1.2" fill="#fff"/>
+        <path d="M27 31 Q31 34 35 31" stroke="#fff" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M19 38 Q15 44 17 48 Q22 44 23 40" fill="#fff" opacity="0.9"/>
+        <path d="M43 38 Q47 44 45 48 Q40 44 39 40" fill="#fff" opacity="0.9"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="starbucks_menu.html">Menu</a></li>
+      <li><a href="starbucks_rewards.html">Rewards</a></li>
+      <li><a href="starbucks_giftcards.html" class="active">Gift Cards</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="#" class="find-store">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Find a store
+    </a>
+    <a href="#" class="btn-signin">Sign in</a>
+    <a href="#" class="btn-join">Join now</a>
+    <a href="cart.html" class="nav-cart" aria-label="View cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+      <span class="cart-badge" style="display:none"></span>
+    </a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="gc-hero">
+  <div class="gc-hero-img left" id="hero-left"></div>
+  <div class="gc-hero-center">
+    <div class="gc-hero-icon">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4F4D46" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/><path d="M19 3l-5 5M5 3l5 5"/></svg>
+    </div>
+    <p class="gc-hero-eyebrow">Moon's Coffee® Gift Cards</p>
+    <h1 class="gc-hero-title">Gift the perfect cup</h1>
+    <p class="gc-hero-desc">Celebrate a milestone. Say a simple thank you.<br>Brighten their day. All with a Moon's Coffee gift card.</p>
+    <p class="gc-hero-balance">Received a card? <a href="#">Check your balance.</a></p>
+  </div>
+  <div class="gc-hero-img right" id="hero-right"></div>
+</section>
+
+<!-- Features -->
+<section class="gc-features">
+  <div class="gc-features-inner">
+    <div class="gc-feature">
+      <div class="gc-feature-icon">✉️</div>
+      <p class="gc-feature-title">Surprise them via email</p>
+      <p class="gc-feature-desc">Choose a design they'll love and send a card straight to their inbox.</p>
+      <a href="#featured" class="gc-feature-btn">Shop now</a>
+    </div>
+    <div class="gc-feature">
+      <div class="gc-feature-icon">📱</div>
+      <p class="gc-feature-title">Send a digital treat</p>
+      <p class="gc-feature-desc">Gift a little delight via email or iMessage, or send it through social.</p>
+      <a href="#featured" class="gc-feature-btn">Gift from your phone ↗</a>
+    </div>
+    <div class="gc-feature">
+      <div class="gc-feature-icon">🏬</div>
+      <p class="gc-feature-title">Browse physical cards</p>
+      <p class="gc-feature-desc">Visit your local coffeehouse or a retailer near you, or order a gift card online.</p>
+      <a href="#featured" class="gc-feature-btn">More ways to gift ↗</a>
+    </div>
+    <div class="gc-feature">
+      <div class="gc-feature-icon">🎉</div>
+      <p class="gc-feature-title">Bring joy to larger groups</p>
+      <p class="gc-feature-desc">Make everyone's day and send many gift cards in one go. Minimum 15 cards per order.</p>
+      <a href="#featured" class="gc-feature-btn">Shop now ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- Card catalog (rendered by JS) -->
+<div class="gc-catalog" id="gc-catalog"></div>
+
+<!-- FAQ -->
+<section class="gc-faq">
+  <div class="gc-faq-inner">
+    <div class="gc-faq-col">
+      <h3>About eGift cards</h3>
+      <p>A Moon's Coffee eGift card (also known as an "eGift") is a gift card that is purchased and sent digitally.</p>
+      <p>For Senders of an eGift, go to eGift History when signed in to view, send, or resend eGifts you've purchased — or, to directly contact eGift Support for help with your order.</p>
+      <a href="#" class="gc-faq-btn">eGift History</a>
+    </div>
+    <div class="gc-faq-col">
+      <h3>About Moon's Coffee Gift Cards in general</h3>
+      <p>Moon's Coffee Gift Cards can be used to pay in a participating Moon's Coffee store or can be used to join the Moon's Coffee Rewards loyalty program.</p>
+      <p>Register Gift Cards and eGifts to a Moon's Coffee Rewards account and Rewards members earn Stars on qualifying purchases when you pay with that card.</p>
+      <a href="#" class="gc-faq-btn">Card Terms &amp; Conditions ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <a href="#">Our Company</a><a href="#">Our Coffee</a>
+        <a href="#">About Moon's Coffee</a><a href="#">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Careers</h4>
+        <a href="#">U.S. Careers</a><a href="#">International Careers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Social Impact</h4>
+        <a href="#">Communities</a><a href="#">Moon's Foundation</a><a href="#">Sustainability</a>
+      </div>
+      <div class="footer-col">
+        <h4>Order and Pick Up</h4>
+        <a href="#">Order on the App</a><a href="#">Delivery</a>
+        <a href="#">Order and Pick Up Options</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="footer-copy">&copy; 2024 Moon's Coffee Company. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/giftcards-data.js"></script>
+<script>
+(function () {
+  var LOGO_SVG = '<svg class="gc-card-logo" viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="31" r="31" fill="rgba(255,255,255,0.25)"/><circle cx="31" cy="31" r="27" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/><ellipse cx="31" cy="28" rx="10" ry="11" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.2"/><path d="M27 31 Q31 34 35 31" stroke="rgba(255,255,255,0.8)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>';
+
+  function cardHTML(card, size) {
+    size = size || 'normal';
+    return '<a href="starbucks_egift.html?id=' + card.id + '" class="gc-card">' +
+      '<div class="gc-card-visual" style="background:' + card.bg + ';color:' + card.text + ';">' +
+        '<span class="gc-card-emoji">' + card.emoji + '</span>' +
+        LOGO_SVG +
+        '<span class="gc-card-label-badge" style="color:' + card.text + ';">' + card.label + '</span>' +
+      '</div>' +
+      '<p class="gc-card-name">' + card.name + '</p>' +
+    '</a>';
+  }
+
+  function miniCard(card, side) {
+    return '<div class="mini-card" style="background:' + card.bg + ';color:' + card.text + ';">' +
+      '<span style="font-size:36px;">' + card.emoji + '</span>' +
+    '</div>';
+  }
+
+  var cards = window.MOON_GIFT_CARDS || [];
+
+  /* Hero cards */
+  var heroL = document.getElementById('hero-left');
+  var heroR = document.getElementById('hero-right');
+  if (heroL && cards[0]) heroL.innerHTML = miniCard(cards[0], 'left');
+  if (heroR && cards[3]) heroR.innerHTML = miniCard(cards[3], 'right');
+
+  /* Catalog */
+  var catalog = document.getElementById('gc-catalog');
+  if (!catalog) return;
+
+  var featured     = cards.filter(function (c) { return c.cat === 'featured'; });
+  var fathersDay   = cards.filter(function (c) { return c.cat === 'fathers-day'; });
+  var graduation   = cards.filter(function (c) { return c.cat === 'graduation'; });
+  var birthday     = cards.filter(function (c) { return c.cat === 'birthday'; });
+  var thankYou     = cards.filter(function (c) { return c.cat === 'thank-you'; });
+  var classic      = cards.filter(function (c) { return c.cat === 'classic'; });
+
+  function section(label, dateNote, cardArr, carousel) {
+    if (!cardArr.length) return '';
+    var header = '<div class="gc-section-header">' +
+      '<span class="gc-section-label">' + label + (dateNote ? ' <span style="font-weight:400;opacity:.6;">| ' + dateNote + '</span>' : '') + '</span>' +
+      '<span class="gc-section-see-all">See all</span>' +
+    '</div>';
+
+    var inner = cardArr.map(cardHTML).join('');
+
+    if (carousel) {
+      return '<div class="gc-section" id="' + label.toLowerCase().replace(/\s+/g, '-') + '">' +
+        header +
+        '<div class="gc-carousel-wrap">' +
+          '<div class="gc-carousel">' + inner + '</div>' +
+          (cardArr.length > 4 ? '<button class="gc-carousel-next" aria-label="Next cards">›</button>' : '') +
+        '</div>' +
+      '</div>';
+    }
+    return '<div class="gc-section">' + header + '<div class="gc-grid">' + inner + '</div></div>';
+  }
+
+  catalog.innerHTML =
+    section('FEATURED', '', featured, true) +
+    section("FATHER'S DAY", '6/21', fathersDay, false) +
+    section('GRADUATION', '', graduation, false) +
+    section('BIRTHDAY', '', birthday, false) +
+    section('THANK YOU', '', thankYou, false) +
+    section('CLASSIC', '', classic, false);
+
+  /* Carousel scroll */
+  catalog.querySelectorAll('.gc-carousel-next').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var carousel = btn.previousElementSibling;
+      carousel.scrollBy({ left: 220, behavior: 'smooth' });
+    });
+  });
+
+  /* Nav toggle */
+  var nav    = document.getElementById('main-nav');
+  var toggle = nav.querySelector('.nav-toggle');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+})();
+</script>
+</body>
+</html>

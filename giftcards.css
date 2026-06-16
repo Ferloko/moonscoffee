@@ -1,0 +1,301 @@
+/* Gift Cards pages */
+
+/* ── Hero ── */
+.gc-hero {
+  background: var(--cream);
+  padding: 56px var(--contentPad);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
+  align-items: center;
+  min-height: 280px;
+}
+.gc-hero-center { text-align: center; }
+.gc-hero-icon { margin-bottom: 12px; }
+.gc-hero-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--houseGreen);
+  margin-bottom: 12px;
+}
+.gc-hero-title {
+  font-size: clamp(28px, 4vw, 42px); font-weight: 700;
+  color: var(--houseGreen); letter-spacing: -.02em;
+  line-height: 1.1; margin-bottom: 14px;
+}
+.gc-hero-desc {
+  font-size: 15px; color: var(--houseGreen); opacity: .85;
+  line-height: 1.5; margin-bottom: 16px;
+}
+.gc-hero-balance { font-size: 14px; color: var(--houseGreen); }
+.gc-hero-balance a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+
+.gc-hero-img { display: flex; align-items: center; justify-content: center; }
+.gc-hero-img.left  { justify-content: flex-end; }
+.gc-hero-img.right { justify-content: flex-start; }
+.gc-hero-img .mini-card { transform: rotate(-8deg); }
+.gc-hero-img.right .mini-card { transform: rotate(6deg); }
+
+/* ── Features strip ── */
+.gc-features {
+  border-bottom: 1px solid var(--border);
+  padding: 40px var(--contentPad);
+}
+.gc-features-inner {
+  max-width: var(--contentMax); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px; text-align: center;
+}
+.gc-feature-icon {
+  font-size: 32px; margin-bottom: 12px;
+  width: 56px; height: 56px;
+  border: 2px solid var(--houseGreen); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; font-size: 20px;
+}
+.gc-feature-title {
+  font-size: 14px; font-weight: 700; color: var(--black);
+  margin-bottom: 8px;
+}
+.gc-feature-desc { font-size: 13px; color: var(--textMuted); line-height: 1.5; margin-bottom: 12px; }
+.gc-feature-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1.5px solid var(--black); border-radius: 50px;
+  padding: 8px 16px; font-size: 13px; font-weight: 600;
+  font-family: inherit; background: none; color: var(--black);
+  cursor: pointer; text-decoration: none;
+  transition: border-color .15s, color .15s;
+}
+.gc-feature-btn:hover { border-color: var(--green); color: var(--green); }
+
+/* ── Cards sections wrapper ── */
+.gc-catalog {
+  max-width: var(--contentMax); margin: 0 auto;
+  padding: 40px var(--contentPad) 80px;
+}
+
+/* ── Section ── */
+.gc-section { margin-bottom: 48px; }
+.gc-section-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.gc-section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--black);
+}
+.gc-section-see-all {
+  font-size: 13px; font-weight: 600; color: var(--green);
+  text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
+}
+
+/* ── Featured carousel ── */
+.gc-carousel-wrap { position: relative; }
+.gc-carousel {
+  display: flex; gap: 16px; overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+.gc-carousel::-webkit-scrollbar { display: none; }
+.gc-carousel-next {
+  position: absolute; right: -16px; top: 50%; transform: translateY(-50%);
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #fff; border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  font-size: 16px; z-index: 10;
+}
+.gc-carousel .gc-card { flex: 0 0 200px; scroll-snap-align: start; }
+
+/* ── Grid (non-featured) ── */
+.gc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* ── Gift Card ── */
+.gc-card { text-decoration: none; color: inherit; cursor: pointer; }
+.gc-card-visual {
+  aspect-ratio: 8 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+  transition: transform .2s, box-shadow .2s;
+}
+.gc-card:hover .gc-card-visual { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.16); }
+
+.gc-card-emoji { font-size: 48px; line-height: 1; }
+
+.gc-card-logo {
+  position: absolute; top: 10px; right: 10px;
+  width: 28px; height: 28px; opacity: .9;
+}
+.gc-card-label-badge {
+  position: absolute; bottom: 8px; left: 8px;
+  background: rgba(255,255,255,.18); backdrop-filter: blur(4px);
+  border-radius: 4px; padding: 2px 6px;
+  font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+}
+.gc-card-name {
+  font-size: 13px; font-weight: 600; color: var(--black); text-align: center;
+}
+
+/* Mini card (hero) */
+.mini-card {
+  width: 180px; height: 112px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40px; box-shadow: 0 4px 16px rgba(0,0,0,.18);
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
+
+/* ── FAQ ── */
+.gc-faq { background: #f9f9f6; padding: 56px var(--contentPad); }
+.gc-faq-inner {
+  max-width: var(--contentMax); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+}
+.gc-faq-col h3 { font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--black); }
+.gc-faq-col p { font-size: 14px; color: var(--textMuted); line-height: 1.6; margin-bottom: 16px; }
+.gc-faq-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1.5px solid var(--black); border-radius: 50px;
+  padding: 9px 18px; font-size: 13px; font-weight: 600;
+  font-family: inherit; background: none; color: var(--black);
+  cursor: pointer; text-decoration: none;
+}
+.gc-faq-btn:hover { border-color: var(--green); color: var(--green); }
+
+/* ═══════════════════════════════════
+   eGift creation page
+   ═══════════════════════════════════ */
+.egift-page-main {
+  min-height: calc(100vh - 83px - 200px);
+  padding: 40px var(--contentPad) 80px;
+}
+.egift-inner {
+  max-width: 600px; margin: 0 auto;
+}
+.egift-breadcrumb {
+  font-size: 13px; color: var(--textMuted); margin-bottom: 24px;
+}
+.egift-breadcrumb a { color: var(--textMuted); text-decoration: none; }
+.egift-breadcrumb a:hover { text-decoration: underline; }
+.egift-breadcrumb span { margin: 0 6px; }
+
+.egift-title { font-size: 28px; font-weight: 700; color: var(--black); letter-spacing: -.01em; margin-bottom: 24px; }
+
+.egift-card-preview {
+  aspect-ratio: 8 / 5; border-radius: 16px; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 80px; margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.12); position: relative; overflow: hidden;
+}
+.egift-card-preview .gc-card-logo {
+  width: 36px; height: 36px; top: 16px; right: 16px;
+}
+
+/* ── Form sections ── */
+.egift-section { margin-bottom: 32px; }
+.egift-section-title { font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 16px; }
+
+.egift-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.egift-field label { font-size: 13px; font-weight: 600; color: var(--black); }
+.egift-field input,
+.egift-field select,
+.egift-field textarea {
+  border: 1.5px solid var(--border); border-radius: 8px;
+  padding: 12px 14px; font-size: 15px; font-family: inherit;
+  color: var(--black); background: #fff; outline: none;
+  transition: border-color .15s;
+}
+.egift-field input:focus,
+.egift-field select:focus,
+.egift-field textarea:focus { border-color: var(--green); }
+.egift-field.is-invalid input,
+.egift-field.is-invalid select { border-color: #c8102e; }
+.egift-field textarea { resize: vertical; min-height: 80px; }
+.egift-required { font-size: 12px; color: var(--textMuted); margin-bottom: 20px; }
+
+/* ── Recipients ── */
+.egift-recipients { display: flex; flex-direction: column; gap: 12px; }
+.egift-recipient-row {
+  display: grid; grid-template-columns: 1fr 1fr auto;
+  gap: 10px; align-items: center;
+}
+.egift-recipient-row input {
+  border: 1.5px solid var(--border); border-radius: 8px;
+  padding: 11px 13px; font-size: 14px; font-family: inherit;
+  color: var(--black); outline: none; transition: border-color .15s;
+}
+.egift-recipient-row input:focus { border-color: var(--green); }
+.egift-recipient-row input.is-invalid { border-color: #c8102e; }
+.btn-remove-recipient {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--border); background: #fff;
+  font-size: 18px; cursor: pointer; font-family: inherit;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--textMuted); flex-shrink: 0;
+}
+.btn-remove-recipient:hover { border-color: #c8102e; color: #c8102e; }
+
+.btn-add-recipient {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--black); color: #fff; border: none;
+  border-radius: 50px; padding: 10px 20px;
+  font-size: 13px; font-weight: 600; font-family: inherit;
+  cursor: pointer; margin-top: 8px;
+  transition: background .15s;
+}
+.btn-add-recipient:hover { background: #333; }
+.egift-max-note { font-size: 12px; color: var(--textMuted); margin-bottom: 8px; text-align: center; }
+
+/* ── Submit ── */
+.egift-error-summary {
+  background: #fff0f0; border: 1px solid #f5c0c0; border-radius: 8px;
+  padding: 12px 16px; font-size: 14px; color: #c8102e; margin-bottom: 20px;
+}
+.btn-send-gift {
+  display: block; width: 100%;
+  background: var(--green); color: #fff; border: none;
+  border-radius: 50px; padding: 15px;
+  font-size: 16px; font-weight: 700; font-family: inherit;
+  cursor: pointer; transition: background .15s; margin-bottom: 12px;
+}
+.btn-send-gift:hover { background: var(--greenHover); }
+.btn-send-gift:disabled { opacity: .6; cursor: not-allowed; }
+.egift-terms { font-size: 12px; color: var(--textMuted); text-align: center; line-height: 1.5; }
+.egift-terms a { color: var(--green); }
+
+/* ── Confirmation ── */
+.egift-confirm {
+  text-align: center; padding: 48px 0;
+}
+.egift-confirm-icon {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--green); margin: 0 auto 24px;
+  display: flex; align-items: center; justify-content: center;
+}
+.egift-confirm-title { font-size: 32px; font-weight: 700; color: var(--black); letter-spacing: -.02em; margin-bottom: 10px; }
+.egift-confirm-msg { font-size: 16px; color: var(--textMuted); line-height: 1.6; margin-bottom: 28px; }
+.egift-confirm-recipients {
+  background: #f7f7f3; border-radius: 12px; padding: 16px 20px;
+  margin: 0 auto 28px; max-width: 360px; text-align: left;
+}
+.egift-confirm-recipients p { font-size: 14px; color: var(--black); padding: 4px 0; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .gc-hero { grid-template-columns: 1fr; text-align: center; }
+  .gc-hero-img { display: none; }
+  .gc-features-inner { grid-template-columns: repeat(2, 1fr); }
+  .gc-faq-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .gc-features-inner { grid-template-columns: 1fr; }
+  .egift-recipient-row { grid-template-columns: 1fr; }
+  .btn-remove-recipient { align-self: flex-end; }
+}
