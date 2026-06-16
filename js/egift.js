@@ -93,7 +93,9 @@
         '<h1 class="egift-title">Create eGift</h1>' +
 
         '<div class="egift-card-preview" style="background:' + card.bg + ';color:' + card.text + ';">' +
-          '<span style="font-size:80px;">' + card.emoji + '</span>' +
+          (card.img
+            ? '<img src="' + card.img + '" alt="' + card.name + '" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" onerror="this.style.display=\'none\'">'
+            : '<span style="font-size:80px;">' + card.emoji + '</span>') +
           LOGO_SVG +
         '</div>' +
 
@@ -278,8 +280,10 @@
           '</div>' +
           '<h1 class="egift-confirm-title">¡eGift enviado!</h1>' +
           '<div class="egift-card-preview" style="background:' + card.bg + ';color:' + card.text + ';max-width:360px;margin:0 auto 24px;">' +
-            '<span style="font-size:60px;">' + card.emoji + '</span>' +
-            '<div style="font-size:24px;font-weight:700;color:' + card.text + ';margin-top:8px;">' + fmt(amount) + '</div>' +
+            (card.img
+              ? '<img src="' + card.img + '" alt="' + card.name + '" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" onerror="this.style.display=\'none\'">'
+              : '<span style="font-size:60px;">' + card.emoji + '</span>') +
+            '<div style="position:relative;z-index:1;font-size:24px;font-weight:700;color:' + card.text + ';text-shadow:0 1px 4px rgba(0,0,0,.3);margin-top:8px;">' + fmt(amount) + '</div>' +
           '</div>' +
           '<p class="egift-confirm-msg">Tu gift card de <strong>' + fmt(amount) + '</strong> fue enviada por <strong>' + sender + '</strong> a:</p>' +
           '<div class="egift-confirm-recipients">' +

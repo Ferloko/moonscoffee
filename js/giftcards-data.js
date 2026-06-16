@@ -1,30 +1,29 @@
 /* Moon's Coffee — Gift Cards catalog */
 window.MOON_GIFT_CARDS = [
   /* ── Featured ── */
-  { id: 'gc-bright', name: "Your Future Is Bright", cat: 'featured', bg: '#c9e265', text: '#4F4D46', emoji: '🎓', label: 'GRADUATION' },
-  { id: 'gc-summer', name: "Moon's Coffee Summer",   cat: 'featured', bg: '#80cbc4', text: '#4F4D46', emoji: '🌴', label: 'SUMMER' },
-  { id: 'gc-miffy',  name: 'miffy + Moon Coffee',   cat: 'featured', bg: '#fce4ec', text: '#880e4f', emoji: '🐰', label: 'COLLAB' },
-  { id: 'gc-dad1',   name: "Happy Father's Day",    cat: 'featured', bg: '#b0bec5', text: '#263238', emoji: '☕', label: "FATHER'S DAY" },
-  { id: 'gc-kicks',  name: "Kick Back, Dad",        cat: 'featured', bg: '#a1887f', text: '#fff',    emoji: '👟', label: "FATHER'S DAY" },
-
-  /* ── Father's Day ── */
-  { id: 'gc-dad2',   name: "World's Best Dad",      cat: 'fathers-day', bg: '#78909c', text: '#fff',    emoji: '🏆', label: "FATHER'S DAY" },
-  { id: 'gc-dad3',   name: 'Coffee & Cheers',       cat: 'fathers-day', bg: '#546e7a', text: '#fff',    emoji: '🥂', label: "FATHER'S DAY" },
-
-  /* ── Graduation ── */
-  { id: 'gc-grad1',  name: 'Congrats Grad 2026',    cat: 'graduation', bg: '#f9a825', text: '#4F4D46', emoji: '🎉', label: 'GRADUATION' },
-  { id: 'gc-grad2',  name: 'Future Awaits',         cat: 'graduation', bg: '#aed581', text: '#33691e', emoji: '🌟', label: 'GRADUATION' },
+  { id: 'gc-celebrate-coffee', name: 'Celebrate with Coffee',   cat: 'featured',    img: 'img/giftcards/CelebrateCoffeeFY25.png',        bg: '#EDE8D0', text: '#4F4D46', emoji: '☕' },
+  { id: 'gc-friends-coffee',   name: 'Friends Buy Coffee',      cat: 'featured',    img: 'img/giftcards/FriendsBuyCoffeeFY25.png',        bg: '#C9C5B1', text: '#4F4D46', emoji: '👯' },
+  { id: 'gc-celebrate-you',    name: 'Celebrate You',           cat: 'featured',    img: 'img/giftcards/CelebrateYouFY25.png',            bg: '#EDE8D0', text: '#4F4D46', emoji: '🎉' },
+  { id: 'gc-you-got-this',     name: 'You Got This',            cat: 'featured',    img: 'img/giftcards/YouGotThisFY25.png',              bg: '#4F4D46', text: '#EDE8D0', emoji: '💪' },
+  { id: 'gc-great-day',        name: 'Great Day for Coffee',    cat: 'featured',    img: 'img/giftcards/GreatDayForCoffeeFY25.png',       bg: '#787569', text: '#EDE8D0', emoji: '🌟' },
+  { id: 'gc-cafe',             name: 'Café Vibes',              cat: 'featured',    img: 'img/giftcards/CafeFY25.png',                    bg: '#C9C5B1', text: '#4F4D46', emoji: '🏡' },
 
   /* ── Birthday ── */
-  { id: 'gc-bday1',  name: 'Happy Birthday',        cat: 'birthday', bg: '#f48fb1', text: '#880e4f', emoji: '🎂', label: 'BIRTHDAY' },
-  { id: 'gc-bday2',  name: 'Make a Wish',           cat: 'birthday', bg: '#ce93d8', text: '#4a148c', emoji: '🕯️', label: 'BIRTHDAY' },
-  { id: 'gc-bday3',  name: 'Treat Yourself',        cat: 'birthday', bg: '#ffcc80', text: '#e65100', emoji: '🎁', label: 'BIRTHDAY' },
+  { id: 'gc-birthday',         name: 'Happy Birthday',          cat: 'birthday',    img: 'img/giftcards/BirthdayFY25.png',                bg: '#EDE8D0', text: '#4F4D46', emoji: '🎂' },
+  { id: 'gc-celebration',      name: 'Celebration Cheers',      cat: 'birthday',    img: 'img/giftcards/CelebrationCheersFY25.png',       bg: '#4F4D46', text: '#EDE8D0', emoji: '🥂' },
+  { id: 'gc-cheers',           name: 'Cheers to You',           cat: 'birthday',    img: 'img/giftcards/CheersToYouFY25.png',             bg: '#787569', text: '#fff',    emoji: '✨' },
 
   /* ── Thank You ── */
-  { id: 'gc-ty1',    name: 'Thank You',             cat: 'thank-you', bg: '#80deea', text: '#006064', emoji: '💚', label: 'THANK YOU' },
-  { id: 'gc-ty2',    name: 'You Are Awesome',       cat: 'thank-you', bg: '#a5d6a7', text: '#1b5e20', emoji: '⭐', label: 'THANK YOU' },
+  { id: 'gc-thank-you-check',  name: 'Thank You',               cat: 'thank-you',   img: 'img/giftcards/ThankYouCheckerFY25.png',         bg: '#C9C5B1', text: '#4F4D46', emoji: '💚' },
+  { id: 'gc-big-thanks',       name: 'Big Thank You',           cat: 'thank-you',   img: 'img/giftcards/BigThankYouFY22.jpg',             bg: '#EDE8D0', text: '#4F4D46', emoji: '🙏' },
+  { id: 'gc-little-perk',      name: 'Little Perk',             cat: 'thank-you',   img: 'img/giftcards/LittlePerkFY25.png',              bg: '#4F4D46', text: '#EDE8D0', emoji: '⭐' },
+
+  /* ── Recognition ── */
+  { id: 'gc-youre-a-star',     name: "You're a Star",           cat: 'recognition', img: 'img/giftcards/YoureAStarCoreFY25.png',          bg: '#EDE8D0', text: '#4F4D46', emoji: '🌠' },
+  { id: 'gc-above-beyond',     name: 'Above and Beyond',        cat: 'recognition', img: 'img/giftcards/AboveAndBeyondFY25.png',          bg: '#787569', text: '#EDE8D0', emoji: '🚀' },
+  { id: 'gc-great-work',       name: 'Great Work Deserves Coffee', cat: 'recognition', img: 'img/giftcards/GreatWorkDeservesCoffeeFY23.jpg', bg: '#4F4D46', text: '#EDE8D0', emoji: '👏' },
 
   /* ── Classic ── */
-  { id: 'gc-classic',name: 'Moon\'s Classic',        cat: 'classic', bg: '#4F4D46', text: '#EDE8D0', emoji: '☕', label: 'CLASSIC' },
-  { id: 'gc-holiday', name: 'Holiday Cheer',        cat: 'classic', bg: '#b71c1c', text: '#fff',    emoji: '🎄', label: 'HOLIDAY' },
+  { id: 'gc-wordmark',         name: "Moon's Classic",          cat: 'classic',     img: 'img/giftcards/WordmarkFY25.png',                bg: '#4F4D46', text: '#EDE8D0', emoji: '☕' },
+  { id: 'gc-heritage',         name: 'Heritage',                cat: 'classic',     img: 'img/giftcards/HeritageMultipackFY23.jpg',       bg: '#787569', text: '#EDE8D0', emoji: '🏛️' },
 ];

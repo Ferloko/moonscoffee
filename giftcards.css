@@ -46,12 +46,11 @@
   gap: 32px; text-align: center;
 }
 .gc-feature-icon {
-  font-size: 32px; margin-bottom: 12px;
   width: 56px; height: 56px;
-  border: 2px solid var(--houseGreen); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px; font-size: 20px;
+  margin: 0 auto 16px;
 }
+.gc-feature-icon img { width: 40px; height: 40px; object-fit: contain; }
 .gc-feature-title {
   font-size: 14px; font-weight: 700; color: var(--black);
   margin-bottom: 8px;
@@ -69,15 +68,14 @@
 
 /* ── Cards sections wrapper ── */
 .gc-catalog {
-  max-width: var(--contentMax); margin: 0 auto;
-  padding: 40px var(--contentPad) 80px;
+  padding: 28px var(--contentPad) 56px;
 }
 
 /* ── Section ── */
-.gc-section { margin-bottom: 48px; }
+.gc-section { margin-bottom: 32px; }
 .gc-section-header {
   display: flex; align-items: baseline; justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .gc-section-label {
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
@@ -88,60 +86,84 @@
   text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
 }
 
+/* ── Card base size token ── */
+:root { --gc-card-w: 500px; }
+
 /* ── Featured carousel ── */
-.gc-carousel-wrap { position: relative; }
+.gc-carousel-wrap { position: relative; overflow: hidden; }
 .gc-carousel {
-  display: flex; gap: 16px; overflow-x: auto;
+  display: flex; gap: 10px;
+  overflow-x: auto; overflow-y: visible;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
+  /* prevent items from growing */
+  align-items: flex-start;
 }
 .gc-carousel::-webkit-scrollbar { display: none; }
 .gc-carousel-next {
-  position: absolute; right: -16px; top: 50%; transform: translateY(-50%);
-  width: 40px; height: 40px; border-radius: 50%;
+  position: absolute; right: 0; top: 40%; transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 50%;
   background: #fff; border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.12);
-  font-size: 16px; z-index: 10;
+  font-size: 15px; z-index: 10;
 }
-.gc-carousel .gc-card { flex: 0 0 200px; scroll-snap-align: start; }
+/* Lock carousel items to a fixed width — no growing */
+.gc-carousel .gc-card {
+  flex: 0 0 var(--gc-card-w);
+  width: var(--gc-card-w);
+  min-width: var(--gc-card-w);
+  max-width: var(--gc-card-w);
+  scroll-snap-align: start;
+}
 
 /* ── Grid (non-featured) ── */
 .gc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--gc-card-w), 1fr));
+  gap: 10px;
 }
 
 /* ── Gift Card ── */
-.gc-card { text-decoration: none; color: inherit; cursor: pointer; }
+.gc-card { text-decoration: none; color: inherit; cursor: pointer; display: block; }
 .gc-card-visual {
+  width: 100%;
   aspect-ratio: 8 / 5;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
   transition: transform .2s, box-shadow .2s;
 }
-.gc-card:hover .gc-card-visual { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.16); }
+.gc-card:hover .gc-card-visual { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 
-.gc-card-emoji { font-size: 48px; line-height: 1; }
+/* Imagen real de la tarjeta */
+.gc-card-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder emoji (visible solo si la imagen falla) */
+.gc-card-placeholder { position: relative; z-index: 1; }
+.gc-card-emoji { font-size: 32px; line-height: 1; }
 
 .gc-card-logo {
-  position: absolute; top: 10px; right: 10px;
-  width: 28px; height: 28px; opacity: .9;
+  position: absolute; top: 6px; right: 6px;
+  width: 20px; height: 20px; opacity: .9;
 }
 .gc-card-label-badge {
-  position: absolute; bottom: 8px; left: 8px;
+  position: absolute; bottom: 5px; left: 5px;
   background: rgba(255,255,255,.18); backdrop-filter: blur(4px);
-  border-radius: 4px; padding: 2px 6px;
-  font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  border-radius: 3px; padding: 1px 5px;
+  font-size: 8px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
 }
 .gc-card-name {
-  font-size: 13px; font-weight: 600; color: var(--black); text-align: center;
+  font-size: 12px; font-weight: 600; color: var(--black); text-align: center;
 }
 
 /* Mini card (hero) */

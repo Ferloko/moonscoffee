@@ -66,25 +66,25 @@
 <section class="gc-features">
   <div class="gc-features-inner">
     <div class="gc-feature">
-      <div class="gc-feature-icon">✉️</div>
+      <div class="gc-feature-icon"><img src="img/gift-ui/email-icon.png" alt="" width="32" height="32"></div>
       <p class="gc-feature-title">Surprise them via email</p>
       <p class="gc-feature-desc">Choose a design they'll love and send a card straight to their inbox.</p>
       <a href="#featured" class="gc-feature-btn">Shop now</a>
     </div>
     <div class="gc-feature">
-      <div class="gc-feature-icon">📱</div>
+      <div class="gc-feature-icon"><img src="img/gift-ui/app-icon.png" alt="" width="32" height="32"></div>
       <p class="gc-feature-title">Send a digital treat</p>
       <p class="gc-feature-desc">Gift a little delight via email or iMessage, or send it through social.</p>
       <a href="#featured" class="gc-feature-btn">Gift from your phone ↗</a>
     </div>
     <div class="gc-feature">
-      <div class="gc-feature-icon">🏬</div>
+      <div class="gc-feature-icon"><img src="img/gift-ui/store-icon.png" alt="" width="32" height="32"></div>
       <p class="gc-feature-title">Browse physical cards</p>
-      <p class="gc-feature-desc">Visit your local coffeehouse or a retailer near you, or order a gift card online.</p>
+      <p class="gc-feature-desc">Visit your local coffeehouse or a Moon's Coffee Card retailer near you, or order a gift card online.</p>
       <a href="#featured" class="gc-feature-btn">More ways to gift ↗</a>
     </div>
     <div class="gc-feature">
-      <div class="gc-feature-icon">🎉</div>
+      <div class="gc-feature-icon"><img src="img/gift-ui/bulk-icon.png" alt="" width="32" height="32"></div>
       <p class="gc-feature-title">Bring joy to larger groups</p>
       <p class="gc-feature-desc">Make everyone's day and send many gift cards in one go. Minimum 15 cards per order.</p>
       <a href="#featured" class="gc-feature-btn">Shop now ↗</a>
@@ -146,19 +146,36 @@
 (function () {
   var LOGO_SVG = '<svg class="gc-card-logo" viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="31" r="31" fill="rgba(255,255,255,0.25)"/><circle cx="31" cy="31" r="27" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/><ellipse cx="31" cy="28" rx="10" ry="11" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.2"/><path d="M27 31 Q31 34 35 31" stroke="rgba(255,255,255,0.8)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>';
 
-  function cardHTML(card, size) {
-    size = size || 'normal';
+  /* Visual interior: imagen real si existe, emoji placeholder si no */
+  function cardVisualContent(card) {
+    if (card.img) {
+      return '<img src="' + card.img + '" alt="' + card.name + '" class="gc-card-img"' +
+             ' onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';">' +
+             /* fallback placeholder shown when image fails to load */
+             '<span class="gc-card-placeholder" style="display:none;flex-direction:column;align-items:center;gap:4px;">' +
+               '<span class="gc-card-emoji">' + card.emoji + '</span>' +
+             '</span>';
+    }
+    return '<span class="gc-card-emoji">' + card.emoji + '</span>';
+  }
+
+  function cardHTML(card) {
     return '<a href="starbucks_egift.html?id=' + card.id + '" class="gc-card">' +
       '<div class="gc-card-visual" style="background:' + card.bg + ';color:' + card.text + ';">' +
-        '<span class="gc-card-emoji">' + card.emoji + '</span>' +
+        cardVisualContent(card) +
         LOGO_SVG +
-        '<span class="gc-card-label-badge" style="color:' + card.text + ';">' + card.label + '</span>' +
       '</div>' +
       '<p class="gc-card-name">' + card.name + '</p>' +
     '</a>';
   }
 
-  function miniCard(card, side) {
+  function miniCard(card) {
+    if (card.img) {
+      return '<div class="mini-card" style="background:' + card.bg + ';overflow:hidden;">' +
+        '<img src="' + card.img + '" alt="' + card.name + '" style="width:100%;height:100%;object-fit:cover;"' +
+        ' onerror="this.style.display=\'none\'">' +
+      '</div>';
+    }
     return '<div class="mini-card" style="background:' + card.bg + ';color:' + card.text + ';">' +
       '<span style="font-size:36px;">' + card.emoji + '</span>' +
     '</div>';
@@ -177,10 +194,9 @@
   if (!catalog) return;
 
   var featured     = cards.filter(function (c) { return c.cat === 'featured'; });
-  var fathersDay   = cards.filter(function (c) { return c.cat === 'fathers-day'; });
-  var graduation   = cards.filter(function (c) { return c.cat === 'graduation'; });
   var birthday     = cards.filter(function (c) { return c.cat === 'birthday'; });
   var thankYou     = cards.filter(function (c) { return c.cat === 'thank-you'; });
+  var recognition  = cards.filter(function (c) { return c.cat === 'recognition'; });
   var classic      = cards.filter(function (c) { return c.cat === 'classic'; });
 
   function section(label, dateNote, cardArr, carousel) {
@@ -206,17 +222,16 @@
 
   catalog.innerHTML =
     section('FEATURED', '', featured, true) +
-    section("FATHER'S DAY", '6/21', fathersDay, false) +
-    section('GRADUATION', '', graduation, false) +
     section('BIRTHDAY', '', birthday, false) +
     section('THANK YOU', '', thankYou, false) +
+    section('RECOGNITION', '', recognition, false) +
     section('CLASSIC', '', classic, false);
 
   /* Carousel scroll */
   catalog.querySelectorAll('.gc-carousel-next').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var carousel = btn.previousElementSibling;
-      carousel.scrollBy({ left: 220, behavior: 'smooth' });
+      carousel.scrollBy({ left: 195, behavior: 'smooth' });
     });
   });
 
